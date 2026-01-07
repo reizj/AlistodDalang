@@ -1,0 +1,119 @@
+/* Navbar Base */
+.navbar {
+  background: transparent; /* Transparent to blend with Hero */
+  padding: 16px 24px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 50;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Navbar when scrolling */
+.navbar.scrolled {
+  background: linear-gradient(to right, #fff5f5, #ffffff);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo */
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: white; /* White on Hero */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.navbar.scrolled .navbar-brand {
+  color: #b91c1c; /* Fire red after scroll */
+}
+
+/* Hamburger */
+.navbar-toggle {
+  display: none;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.3s ease;
+}
+
+.navbar.scrolled .navbar-toggle {
+  color: #b91c1c; /* Fire red after scroll */
+}
+
+.navbar-toggle:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+}
+
+/* Menu */
+.custom-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 1.5rem;
+  transition: all 0.3s ease-in-out;
+  display: none;
+}
+
+.custom-menu.open {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .custom-menu {
+    position: relative;
+    width: auto;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+  }
+}
+
+/* Links */
+.custom-nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white; /* White in Hero */
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.scrolled .custom-nav-link {
+  color: #1c1c1c; /* Dark after scroll */
+}
+
+.custom-nav-link:hover {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+/* CTA Button */
+.rent-now-btn {
+  background: #b91c1c;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.rent-now-btn:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}
